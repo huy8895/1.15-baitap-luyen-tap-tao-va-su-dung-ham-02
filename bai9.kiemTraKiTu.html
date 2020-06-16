@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 9 kiem tra ki tu</title>
+</head>
+<body>
+<script>
+    let arr = ['a','b','c','d','e','f'];
+    let character = prompt('nham vao 1 ky tu bat ky')
+    function checkCharacterOccurrence(array,character) {
+        let numberOfOccurrence = 0;
+        if (array.includes(character)){
+            index = array.indexOf(character);
+            return index;
+        } else {
+            return -1;
+        }
+    }
+    alert(checkCharacterOccurrence(arr,character))
+</script>
+</body>
+</html>

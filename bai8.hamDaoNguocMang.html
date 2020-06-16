@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 8 ham dao nguoc mang</title>
+</head>
+<body>
+<script>
+    function reverseArray(array) {
+        let temporary;
+        for (let i = 0; i < array.length / 2; i ++){
+            temporary = array[i];
+            array[i] = array[array.length - 1 - i];
+            array[array.length - 1 - i] = temporary;
+        }
+        return array;
+    }
+    let array = [1,2,3,4,5,6];
+    document.write(reverseArray(array))
+</script>
+</body>
+</html>
