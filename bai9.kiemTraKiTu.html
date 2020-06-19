@@ -6,17 +6,27 @@
 </head>
 <body>
 <script>
-    let arr = ['a','b','c','d','e','f'];
+    let arr = ['a','b','c','d','e','f','a','b','c','d','e','f'];
     let character = prompt('nham vao 1 ky tu bat ky')
     function checkCharacterOccurrence(array,character) {
-        let numberOfOccurrence = 0;
-        if (array.includes(character)){
-            index = array.indexOf(character);
-            return index;
-        } else {
-            return -1;
+        let count = 0;
+        let tontai = false;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === character) {
+                tontai = true;
+                break;
+            }
         }
+        if (tontai) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === character) {
+                    count += 1;
+                }
+            }
+        } else count = -1
+        return count;
     }
+
     alert(checkCharacterOccurrence(arr,character))
 </script>
 </body>
